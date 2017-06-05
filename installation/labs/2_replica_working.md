@@ -1,4 +1,5 @@
-ql> show slave status \G;
+<pre>
+myql> show slave status \G;
 *************************** 1. row ***************************
                Slave_IO_State: Waiting for master to send event
                   Master_Host: master
@@ -55,4 +56,4 @@ Master_SSL_Verify_Server_Cert: No
             Executed_Gtid_Set:
                 Auto_Position: 0
 1 row in set (0.00 sec)
-
+</pre>
