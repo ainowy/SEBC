@@ -1,10 +1,11 @@
 #My cluster is formed by(see 0_nodes.md) -> in order to work better with the machines, the /etc/hosts of each machine has been modified:
-
+<br>
 172.31.45.11 cloudera
 172.31.42.71 master
 172.31.38.231 worker1
 172.31.41.56 worker2
 172.31.47.219 worker3
+<br>
 
 #Check vm.swapiness on all your nodes:
 
@@ -18,18 +19,22 @@ cat /proc/sys/vm/swapiness
 sudo vi /etc/sysctl.conf and we add the line: vm.swappiness = 1 -> we need to reboot the machine
 
 command line: sudo sysctl vm.swappiness=1
-
+<br>
 [centos@ip-172-31-45-11 ~]$ sudo sysctl vm.swappiness=1
 vm.swappiness = 1
+<br>
 [centos@ip-172-31-42-71 ~]$ sudo cat /proc/sys/vm/swappiness
 1
+<br>
 [centos@ip-172-31-38-231 ~]$ sudo sysctl vm.swappiness=1
 vm.swappiness = 1
+<br>
 [centos@ip-172-31-41-56 ~]$ sudo sysctl vm.swappiness=1
 vm.swappiness = 1
+<br>
 [centos@worker3 ~]$ sudo sysctl vm.swappiness=1
 vm.swappiness = 1
-
+<br>
 #show mount attributes of volumes:
 
 [root@master transparent_hugepage]# cat /etc/fstab
@@ -42,20 +47,24 @@ vm.swappiness = 1
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
 #
 UUID=29342a0b-e20f-4676-9ecf-dfdf02ef6683 /                       xfs     defaul                                                                                        ts        0 0
-
-
+<br>
 [root@master ~]# lsblk
 NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 xvda    202:0    0  30G  0 disk
 └─xvda1 202:1    0  30G  0 part /
 
 [root@master ~]# fdisk -l
-
+<br>
 Disk /dev/xvda: 32.2 GB, 32212254720 bytes, 62914560 sectors
+<br>
 Units = sectors of 1 * 512 = 512 bytes
+<br>
 Sector size (logical/physical): 512 bytes / 512 bytes
+<br>
 I/O size (minimum/optimal): 512 bytes / 512 bytes
+<br>
 Disk label type: dos
+<br>
 Disk identifier: 0x000b2270
 
     Device Boot      Start         End      Blocks   Id  System
@@ -69,13 +78,14 @@ I'm not using any ext-based volume
 #disable transparent hugepage support:
 
 to check status: /sys/kernel/mm/transparent_hugepage/enabled
-
+<br>
 [root@master transparent_hugepage]# echo never > /sys/kernel/mm/transparent_hugepage/enabled
+<br>
 [root@master transparent_hugepage]# cat /sys/kernel/mm/transparent_hugepage/enabled
 always madvise [never]
-
+<br>
 #list the network interface configuration:
-
+<br>
 [centos@master transparent_hugepage]$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
         inet 172.31.42.71  netmask 255.255.240.0  broadcast 172.31.47.255
@@ -94,7 +104,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 6  bytes 416 (416.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
+<br>
 #list forward and reverse host lookups:
  as nslokup is not installed. First we need to install bind-utils
 
@@ -102,13 +112,14 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 Server:         172.31.0.2
 Address:        172.31.0.2#53
 
-
+<br>
 #show nscd/ntpd service is running:
 
 as none of the services were installed on CentOs I'm using, we have to install 
 both commands:
-
+<br>
 [centos@master ~]$ sudo yum install -y ntp nscd
+<br>
 [centos@master ~]$ sudo chkconfig ntpd on
 Note: Forwarding request to 'systemctl enable ntpd.service'.
 Created symlink from /etc/systemd/system/multi-user.target.wants/ntpd.service to /usr/lib/systemd/system/ntpd.service.
@@ -118,10 +129,13 @@ Redirecting to /bin/systemctl start  ntpd.service
 Note: Forwarding request to 'systemctl enable nscd.service'.
 Created symlink from /etc/systemd/system/multi-user.target.wants/nscd.service to /usr/lib/systemd/system/nscd.service.
 Created symlink from /etc/systemd/system/sockets.target.wants/nscd.socket to /usr/lib/systemd/system/nscd.socket.
+<br>
 [centos@master ~]$ sudo service nscd start
 Redirecting to /bin/systemctl start  nscd.service
+<br>
 [centos@master ~]$ sudo service ntpd start
 Redirecting to /bin/systemctl start  ntpd.service
+<br>
 [centos@master ~]$ sudo service nscd status
 Redirecting to /bin/systemctl status  nscd.service
 ● nscd.service - Name Service Cache Daemon
