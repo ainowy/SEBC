@@ -1,4 +1,4 @@
-#MY CLuster is formed by:
+#My cluster is formed by(see 0_nodes.md) -> in order to work better with the machines, the /etc/hosts of each machine has been modified:
 
 172.31.45.11 cloudera
 172.31.42.71 master
