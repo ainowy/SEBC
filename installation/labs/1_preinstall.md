@@ -1,9 +1,13 @@
 #My cluster is formed by(see 0_nodes.md) -> in order to work better with the machines, the /etc/hosts of each machine has been modified:
 <br>
 172.31.45.11 cloudera
+<br>
 172.31.42.71 master
+<br>
 172.31.38.231 worker1
+<br>
 172.31.41.56 worker2
+<br>
 172.31.47.219 worker3
 <br>
 
@@ -123,8 +127,10 @@ both commands:
 [centos@master ~]$ sudo chkconfig ntpd on
 Note: Forwarding request to 'systemctl enable ntpd.service'.
 Created symlink from /etc/systemd/system/multi-user.target.wants/ntpd.service to /usr/lib/systemd/system/ntpd.service.
+<br>
 [centos@master ~]$ sudo service ntpd start
 Redirecting to /bin/systemctl start  ntpd.service
+<br>
 [centos@master ~]$ sudo chkconfig nscd on
 Note: Forwarding request to 'systemctl enable nscd.service'.
 Created symlink from /etc/systemd/system/multi-user.target.wants/nscd.service to /usr/lib/systemd/system/nscd.service.
@@ -145,13 +151,19 @@ Redirecting to /bin/systemctl status  nscd.service
  Main PID: 16696 (nscd)
    CGroup: /system.slice/nscd.service
            └─16696 /usr/sbin/nscd
-
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 monitoring directory `/etc` (2)
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 monitoring file `/etc/resolv.conf` (5)
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 monitoring directory `/etc` (2)
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 monitoring file `/etc/services` (6)
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 monitoring directory `/etc` (2)
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 disabled inotify-based monitoring...ry
+<br>
 Jun 05 14:11:53 master nscd[16696]: 16696 stat failed for file `/etc/netgro...ry
 Jun 05 14:11:53 master nscd[16696]: 16696 Access Vector Cache (AVC) started
 Jun 05 14:11:53 master systemd[1]: Started Name Service Cache Daemon.
