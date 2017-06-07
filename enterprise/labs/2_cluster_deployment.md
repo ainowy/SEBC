@@ -1,7 +1,7 @@
 <pre>
 
 
-[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/cm/deployment' > cm-deployment.json
+<b>[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/cm/deployment' > cm-deployment.json</b>
 
 [root@ip-172-31-47-133 ~]# cat cm-deployment.json
 {
@@ -1432,7 +1432,7 @@
 </pre>
 
 <pre>
-[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/ai/v12/clusters/ainowy/services/hive/'
+<b>[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/ai/v12/clusters/ainowy/services/hive/'</b>
 {
   "name" : "hive",
   "type" : "HIVE",
@@ -1459,7 +1459,8 @@
   "displayName" : "Hive",
   "entityStatus" : "GOOD_HEALTH"
 }[root@ip-172-31-47-133 ~]# clear
-[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/clusters/ainowy/services/hive/'
+
+<b>[root@ip-172-31-47-133 ~]# curl -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/clusters/ainowy/services/hive/'</b>
 {
   "name" : "hive",
   "type" : "HIVE",
@@ -1490,7 +1491,7 @@
 
 <pre>
 
-[root@ip-172-31-47-133 ~]# curl -X POST -u ainowy:cloudera 'http://34.249.47.20:7180/api/v12/clusters/ainowy/services/hive/commands/stop'
+<b>[root@ip-172-31-47-133 ~]# curl -X POST -u ainowy:cloudera 'http://34.249.47.20:7180/api/v12/clusters/ainowy/services/hive/commands/stop' </b>
 {
   "id" : 375,
   "name" : "Stop",
@@ -1502,7 +1503,7 @@
   }
 </pre>
 
-[root@ip-172-31-47-133 ~]# curl -X POST -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/clusters/ainowy/services/hive/commands/start'
+<b>[root@ip-172-31-47-133 ~]# curl -X POST -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/clusters/ainowy/services/hive/commands/start'</b>
 {
   "id" : 379,
   "name" : "Start",
@@ -1513,7 +1514,4 @@
     "serviceName" : "hive"
   }
 
-<pre>
 
-
-</pre>
