@@ -10,7 +10,7 @@ Workload factor	2
 Worker nodes	10
 
 I would say the memory for OS has a high value for a worker node. I think an amount between 0.6% and 0.9% can be enough for the OS. 
-Then, in order to allow to execute more tasks per CPU, we should do yarn.nodemanager.resource.cpu-vcores * "workload factor"
+
 
 <b>2. What criteria affects workload factor? What does a value of 1, 2, or 4 signify?</b>
 
