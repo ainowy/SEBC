@@ -1,4 +1,4 @@
-<h1<b> Terasort </b></h1>
+<h1><b> Terasort </b></h1>
 <pre>
 [root@ip-172-31-39-40 ~]# time hadoop jar /opt/cloudera/parcels/CDH-5.8.3-1.cdh5.8.3.p0.2/lib/hadoop-0.20-mapreduce/hadoop-examples.jar terasort /user/ainowy/teragen /user/ainowy/terasort
 17/06/07 09:16:03 INFO terasort.TeraSort: starting
