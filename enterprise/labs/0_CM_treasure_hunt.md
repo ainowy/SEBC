@@ -50,9 +50,9 @@ WebHcat
 
 <b>What steps must be completed before integrating Cloudera Manager with Kerberos?</b>
 
-Before completing CM with kerberos you have to install krb5-workstation and auth-libs in all nodes and krb5-server in the KDC node. Also, 
-in this file we should specify the type of encryption that our tickets will have.
-Besides, we have to setup the kdc.conf file and kadmin.acl. In the kdc.conf we will have to specify which will be our KDC server and 
+Before completing CM with kerberos you have to install krb5-workstation and auth-libs in all nodes and krb5-server in the KDC node. 
+Besides, we have to setup the kdc.conf file and kadmin.acl. In the kdc.conf we will have to specify which will be our KDC server and
+also, in this file we should specify the type of encryption that our tickets will have.
 For this reason, as Cloudera needs an admin principal that allows it to create automatically the principals for the services, 
 we will have to create a CM principal so that it can do so. The other configuration file that we should modify if we were not using CM is
 krb5.conf. However, the best to do is to allow CM to manage the file as it will modify it according to the configuration that we 
