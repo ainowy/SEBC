@@ -32,13 +32,13 @@ Disk identifier: 0x00000000
 
 
 
-#disable transparent hugepage support:
+<b>#disable transparent hugepage support:</b>
 
 I do not have transparent_hugepages enabled in my kernel by default
 
-#list the network interface configuration:
+<b>#list the network interface configuration:</b>
 
-ot@ip-172-31-47-133 ~]# ifconfig
+root@ip-172-31-47-133 ~]# ifconfig
 
 eth0      Link encap:Ethernet  HWaddr 0A:DE:B6:9D:BC:22
           inet addr:172.31.47.133  Bcast:172.31.47.255  Mask:255.255.240.0
@@ -61,14 +61,14 @@ lo        Link encap:Local Loopback
 
 
 
-#list forward and reverse host lookups:
+<b>#list forward and reverse host lookups:</b>
  as nslokup is not installed. First we need to install bind-utils
 
 [root@ip-172-31-47-133 ~]# nslookup ip-172-31-47-133
 Server:         172.31.0.2
 Address:        172.31.0.2#53
 
-#status nscd:
+<b>#status nscd:</b>
 
 [root@ip-172-31-47-133 ~]# service nscd status
 nscd (pid 1043) is running...
