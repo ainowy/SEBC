@@ -20,9 +20,9 @@ you can find out the property "default_realm".
 
 We can enable kerberos authentication in different levels:
 
--Webconsoles (SPNEGO)
 -Enable in Zookeeper
--Enable in Yarn 
+-Enable in Yarn, HDFS
+-Webconsoles (HTTP)
 
 Besides, there are also other services in which we can enable Kerberos. However, in order to answer this question, I will take into 
 account only the ones which have been installed in the cluster for this course.
