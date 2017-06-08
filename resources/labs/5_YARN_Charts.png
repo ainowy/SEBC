@@ -1,2 +1,6 @@
+<pre>
 In the "issues" tab I wrote a comment in which I explained that I execute the script in Yarn. However, although the script was executed 
 successfully, once I try to access Yarn charts, I get "no data" on them. 
+
+I added a file named "yarn issues" in which you can see the script was executed successfully
+</pre>
