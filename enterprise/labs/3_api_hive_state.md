@@ -69,7 +69,7 @@
     "serviceName" : "hive"
   }
 </pre>
-
+<pre>
 <b>[root@ip-172-31-47-133 ~]# curl -X POST -u ainowy:cloudera 'http://34.249.47.205:7180/api/v12/clusters/ainowy/services/hive/commands/start'</b>
 {
   "id" : 379,
@@ -80,5 +80,5 @@
     "clusterName" : "cluster",
     "serviceName" : "hive"
   }
-
+</pre>
 
