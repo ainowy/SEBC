@@ -30,7 +30,11 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x00000000
 
-
+[root@ip-172-31-39-40 ~]# df -H
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvde        32G  8.5G   22G  29% /
+tmpfs           7.9G     0  7.9G   0% /dev/shm
+cm_processes    7.9G  6.9M  7.9G   1% /var/run/cloudera-scm-agent/process
 
 <b>#disable transparent hugepage support:</b>
 
