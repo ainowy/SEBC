@@ -1,10 +1,7 @@
-<pre>
-<b> kadm5.acl</b>
+
 
 [root@ip-172-31-39-40 ~]# cat /var/kerberos/krb5kdc/kadm5.acl
 */admin@AINOWY.ES   
 
 In this way, I create a cloudera manager principal like: cloudera-scm/admin because it allows that all principals that are with the 
-structure "*/admin@AINOWY.ES" are admins in Kerberos so that they can create principals and so on
 
-</pre>
