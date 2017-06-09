@@ -31,7 +31,53 @@ Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           7.9G     0  7.9G   0% /dev/shm
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvde       106G  708M  100G   1% /
-tmpfs           7.9G     0  7.9G   0% /dev/shm
+tmpfs           7.9G     0  7.9G   0% /dev/sh
+
+<b>List the command and output for yum repolist enabled</b>
+
+[root@ip-172-31-41-46 ~]#  for i in  `echo $NODES`; do ssh -i Cluster.pem $i yum repolist enabled; done
+Loaded plugins: fastestmirror, presto
+Loading mirror speeds from cached hostfile
+ * base: ftp.heanet.ie
+ * extras: ftp.heanet.ie
+ * updates: ftp.heanet.ie
+repo id                        repo name                                  status
+base                           CentOS-6 - Base                            6,706
+extras                         CentOS-6 - Extras                             45
+updates                        CentOS-6 - Updates                           354
+repolist: 7,105
+Loaded plugins: fastestmirror, presto
+Loading mirror speeds from cached hostfile
+ * base: ftp.heanet.ie
+ * extras: ftp.heanet.ie
+ * updates: ftp.heanet.ie
+repo id                           repo name                               status
+base                              CentOS-6 - Base                         6,706
+cloudera-manager                  Cloudera Manager, Version 5.9.2             7
+extras                            CentOS-6 - Extras                          45
+mysql-connectors-community        MySQL Connectors Community                 36
+mysql-tools-community             MySQL Tools Community                      47
+mysql57-community                 MySQL 5.7 Community Server                183
+updates                           CentOS-6 - Updates                        354
+repolist: 7,378
+Loaded plugins: fastestmirror, presto
+repo id                        repo name                                  status
+base                           CentOS-6 - Base                            6,706
+extras                         CentOS-6 - Extras                             45
+updates                        CentOS-6 - Updates                           354
+repolist: 7,105
+Loaded plugins: fastestmirror, presto
+repo id                        repo name                                  status
+base                           CentOS-6 - Base                            6,706
+extras                         CentOS-6 - Extras                             45
+updates                        CentOS-6 - Updates                           354
+repolist: 7,105
+Loaded plugins: fastestmirror, presto
+repo id                        repo name                                  status
+base                           CentOS-6 - Base                            6,706
+extras                         CentOS-6 - Extras                             45
+updates                        CentOS-6 - Updates                           354
+repolist: 7,105
 
 <b>Add the following Linux accounts to all nodes</b>
 
