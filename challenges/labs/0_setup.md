@@ -33,4 +33,35 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvde       106G  708M  100G   1% /
 tmpfs           7.9G     0  7.9G   0% /dev/shm
 
+<b>Add the following Linux accounts to all nodes</b>
+
+[root@ip-172-31-41-46 ~]# export NODES="ip-172-31-41-46 ip-172-31-36-216  ip-172-31-39-38 ip-172-31-40-250 ip-172-31-36-114"
+[root@ip-172-31-41-46 ~]#  for i in  `echo $NODES`; do ssh -i Cluster.pem $i egrep "jeremy" /etc/passwd; done
+jeremy:x:3000:3000::/home/jeremy:/bin/bash
+jeremy:x:3000:3000::/home/jeremy:/bin/bash
+jeremy:x:3000:3000::/home/jeremy:/bin/bash
+jeremy:x:3000:3000::/home/jeremy:/bin/bash
+jeremy:x:3000:3000::/home/jeremy:/bin/bash
+
+[root@ip-172-31-41-46 ~]#  for i in  `echo $NODES`; do ssh -i Cluster.pem $i egrep "theresa" /etc/passwd; done
+theresa:x:2000:2000::/home/theresa:/bin/bash
+theresa:x:2000:2000::/home/theresa:/bin/bash
+theresa:x:2000:2000::/home/theresa:/bin/bash
+theresa:x:2000:2000::/home/theresa:/bin/bash
+theresa:x:2000:2000::/home/theresa:/bin/bash
+
+[root@ip-172-31-41-46 ~]#  for i in  `echo $NODES`; do ssh -i Cluster.pem $i egrep "labour" /etc/group; done
+labour:x:3002:jeremy
+labour:x:3002:jeremy
+labour:x:3002:jeremy
+labour:x:3002:jeremy
+labour:x:3002:jeremy
+
+[root@ip-172-31-41-46 ~]#  for i in  `echo $NODES`; do ssh -i Cluster.pem $i egrep "conservative" /etc/group; done
+conservative:x:3001:theresa
+conservative:x:3001:theresa
+conservative:x:3001:theresa
+conservative:x:3001:theresa
+conservative:x:3001:theresa
+
 </pre>
