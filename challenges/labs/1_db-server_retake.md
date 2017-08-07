@@ -16,7 +16,7 @@ mysql> select @@hostname;
 mysql  Ver 14.14 Distrib 5.5.57, for Linux (x86_64) using readline 5.1
 
 <b>A command and output that lists all the databases in the server</b>
-
+<p>
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -32,8 +32,4 @@ mysql> show databases;
 | sentry             |
 +--------------------+
 9 rows in set (0.00 sec)
-
-
-
-
 </p>
