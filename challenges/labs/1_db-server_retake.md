@@ -1,9 +1,7 @@
 <h1>Challenge 1: Install a MySQL server</h1>
 
-<p>
-
 <b>Command and output that shows the hostname of your database server </b>
-
+<p>
 mysql> select @@hostname;
 +------------------+
 | @@hostname       |
@@ -11,7 +9,7 @@ mysql> select @@hostname;
 | ip-172-31-12-138 |
 +------------------+
 1 row in set (0.00 sec)
-
+</p>
 <b>A command and output that reports the database server version</b>
 
 [root@ip-172-31-12-138 ~]# mysql --version
