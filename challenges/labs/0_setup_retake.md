@@ -1,4 +1,4 @@
-<h1><b> Setup your cluster </b></h>
+<h1><b> Setup your cluster </b></h1>
 
 <p>
 <b>List the cloud provider you are using (AWS, GCE, Azure, CloudCat, other)</b>
@@ -17,8 +17,6 @@ My Cloud Provider is AWS
 
 [root@ip-172-31-12-138 ~]# cat /etc/redhat-release
 CentOS release 6.5 (Final)
-
-<b>List the file system capacity for the first node</b>
 
 <b>List the command and output for yum repolist enabled</b>
 
