@@ -4,7 +4,13 @@
 
 <b>Command and output that shows the hostname of your database server </b>
 
-
+mysql> select @@hostname;
++------------------+
+| @@hostname       |
++------------------+
+| ip-172-31-12-138 |
++------------------+
+1 row in set (0.00 sec)
 
 <b>A command and output that reports the database server version</b>
 
@@ -29,13 +35,7 @@ mysql> show databases;
 +--------------------+
 9 rows in set (0.00 sec)
 
-mysql> select @@hostname;
-+------------------+
-| @@hostname       |
-+------------------+
-| ip-172-31-12-138 |
-+------------------+
-1 row in set (0.00 sec)
+
 
 
 </p>
