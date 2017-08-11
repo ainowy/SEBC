@@ -6,8 +6,8 @@ Cloud Provider: AWS
 
 <b>List your instances by IP address and DNS name (don't use /etc/hosts for this)</b>
 
-34.253.183.12 ec2-34-253-183-12.eu-west-1.compute.amazonaws.com
 54.171.238.114 ec2-54-171-238-114.eu-west-1.compute.amazonaws.com
+34.253.183.12 ec2-34-253-183-12.eu-west-1.compute.amazonaws.com
 54.194.124.47 ec2-54-194-124-47.eu-west-1.compute.amazonaws.com
 54.246.158.204 ec2-54-246-158-204.eu-west-1.compute.amazonaws.com
 176.34.121.87 ec2-176-34-121-87.eu-west-1.compute.amazonaws.com
