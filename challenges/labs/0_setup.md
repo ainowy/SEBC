@@ -6,11 +6,11 @@ Cloud Provider: AWS
 
 <b>List your instances by IP address and DNS name (don't use /etc/hosts for this)</b>
 
-54.171.238.114 ec2-54-171-238-114.eu-west-1.compute.amazonaws.com
-34.253.183.12 ec2-34-253-183-12.eu-west-1.compute.amazonaws.com
-54.194.124.47 ec2-54-194-124-47.eu-west-1.compute.amazonaws.com
-54.246.158.204 ec2-54-246-158-204.eu-west-1.compute.amazonaws.com
-176.34.121.87 ec2-176-34-121-87.eu-west-1.compute.amazonaws.com
+54.171.238.114 ip-172-31-21-134.eu-west-1.compute.internal ec2-54-171-238-114.eu-west-1.compute.amazonaws.com
+34.253.183.12 ip-172-31-27-23.eu-west-1.compute.internal ec2-34-253-183-12.eu-west-1.compute.amazonaws.com
+54.194.124.47 ip-172-31-23-11.eu-west-1.compute.internal ec2-54-194-124-47.eu-west-1.compute.amazonaws.com
+54.246.158.204 ip-172-31-19-53.eu-west-1.compute.internal ec2-54-246-158-204.eu-west-1.compute.amazonaws.com
+176.34.121.87 ip-172-31-27-203.eu-west-1.compute.internal ec2-176-34-121-87.eu-west-1.compute.amazonaws.com
 
 <b>List the Linux release you are using</b>
 
