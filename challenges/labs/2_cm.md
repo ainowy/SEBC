@@ -13,7 +13,7 @@ Executing:  /usr/java/jdk1.8.0_91/bin/java -cp /usr/share/java/mysql-connector-j
 log4j:ERROR Could not find value for key log4j.appender.A
 log4j:ERROR Could not instantiate appender named "A".
 [2017-08-11 07:21:16,984] INFO     0[main] - com.cloudera.enterprise.dbutil.DbCommandExecutor.testDbConnection(DbCommandExecutor.java) - Successfully connected to database.
-All done, your SCM database is configured correctly!
+<b>All done, your SCM database is configured correctly!</b>
 
 
 
