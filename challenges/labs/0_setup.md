@@ -19,14 +19,14 @@ CentOS release 6.5 (Final)
 
 <b>List the file system capacity for the first node</b>
 
-[root@ip-172-31-27-23 ~]# df -H
+[root@ip-172-31-21-134 ~]# df -H
 
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvde       106G  740M  100G   1% /
 tmpfs           7.9G     0  7.9G   0% /dev/shm
 
 <b>List the command and output for yum repolist enabled</b>
-[root@ip-172-31-27-23 ~]# yum repolist enabled
+[root@ip-172-31-21-134 ~]# yum repolist enabled
 Loaded plugins: fastestmirror, presto
 Determining fastest mirrors
  * base: repo.uk.bigstepcloud.com
